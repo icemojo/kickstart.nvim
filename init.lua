@@ -410,9 +410,15 @@ require('lazy').setup({
   },
 
 
-  -- Highlight todo, notes, etc in comments
-  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
-
+  -- Allows toggling soft wrapping in the current buffer
+  --   :set wrap?  to check the current wrap mode
+  --   yow         toggle soft wrap/unwrap modes
+  {
+    "andrewferrier/wrapping.nvim",
+    config = function()
+      require("wrapping").setup()
+    end 
+  },
 
 }, {
   ui = {
