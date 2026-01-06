@@ -123,8 +123,8 @@ vim.o.breakindent = true
 
 -- Tab key (indentation) input settings
 vim.o.tabstop = 4 -- a <tab> character looks like 4 spaces
---vim.o.expandtab = true  --pressing the <tab> will insert spaces instead of a \t character
---vim.o.softtabstop = 4   -- number of spaces inserted instead of a \t character
+vim.o.expandtab = true --pressing the <tab> will insert spaces instead of a \t character
+vim.o.softtabstop = 4 -- number of spaces inserted instead of a \t character
 vim.o.shiftwidth = 4 -- number of spaces inserted when indenting
 
 -- Save undo history
@@ -709,6 +709,12 @@ require('lazy').setup({
         -- ts_ls = {},
         --
 
+        -- Odin LSP
+        --ols = {
+        --  cmd = { 'ols' },
+        --  root_dir = util.root_pattern('.git', '*.odin', 'main.odin'),
+        --},
+
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
@@ -969,7 +975,7 @@ require('lazy').setup({
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'zig', 'go' },
+      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'zig', 'odin', 'go' },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
