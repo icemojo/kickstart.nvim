@@ -698,6 +698,15 @@ require('lazy').setup({
             },
           },
         },
+        templ = {
+          filetypes = { 'templ' },
+          settings = {
+            templ = {
+              enable_snippets = false,
+            },
+          },
+        },
+
         -- pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
